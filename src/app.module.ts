@@ -1,9 +1,8 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { ServerConfig } from './config';
 import { CoreModule } from './core/core.module';
+import { CatsModule } from './modules/cats/cats.module';
 
 @Module({
   imports: [
@@ -12,8 +11,7 @@ import { CoreModule } from './core/core.module';
       load: [ServerConfig],
     }),
     CoreModule,
+    CatsModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}

@@ -1,3 +1,7 @@
+import { AzureMonitorHelper } from './core/helpers';
+
+AzureMonitorHelper.init();
+
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import {
